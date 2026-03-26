@@ -1,16 +1,44 @@
-# React + Vite
+# Chronos | Timeless Elegance
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Chronos Header](/public/watch-movement.png)
 
-Currently, two official plugins are available:
+A highly interactive, premium frontend web application designed for a luxury watch brand. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
+This project showcases a modern, high-end web experience built from the ground up to emphasize craftsmanship and fluid motion. It pairs a sophisticated dark-mode aesthetic with deeply integrated scroll animations and a bespoke 3D element.
 
-## React Compiler
+## 🛠 Tech Stack
+- **React (Vite)** – High-performance frontend framework.
+- **Three.js (`@react-three/fiber` & `@react-three/drei`)** – For rendering and controlling the abstract 3D mechanical clock.
+- **GSAP & ScrollTrigger** – Powering all the scroll-linked parallax, staggered reveals, and entrance animations.
+- **Vanilla CSS3** – A custom, lightweight design system utilizing CSS variables and modern layout techniques.
+- **Lucide React** – Minimalist iconography.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
+- **Abstract 3D Canvas**: A unique, minimalist clock face built from Three.js primitives that sits behind the UI. It rotates and tilts based on the user's scroll depth.
+- **Deep Parallax & Motion**: Staggered text reveals, expanding accent lines, and continuous ambient rotations breathe life into static sections.
+- **Interactive Product Cards**: Watch showcases feature 3D transform enter-animations (tilt & scale), infinite mechanical ring rotations, and highly responsive hover states.
+- **Premium Contact Form**: Custom-styled input fields with radial gold glow effects that stagger sequentially on scroll.
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To run this project locally, simply clone the repository and install the dependencies:
+
+```bash
+# Clone the repository
+git clone https://github.com/imsg1006/chronos.git
+
+# Navigate to the directory
+cd chronos
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Navigate to `http://localhost:5173/` to experience the website.
+
+## 📄 License
+This project is open-source and available under the standard MIT License.
