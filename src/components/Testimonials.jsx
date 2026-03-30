@@ -42,11 +42,9 @@ export default function Testimonials() {
         <h2 style={styles.heading}>JOURNAL & SOCIETY</h2>
         <div style={styles.list}>
           {testimonials.map((test, index) => (
-            <TestimonialCard 
-              key={index}
-              test={test}
-              assignRef={el => itemsRef.current[index] = el}
-            />
+            <div key={index} ref={el => itemsRef.current[index] = el}>
+              <TestimonialCard test={test} />
+            </div>
           ))}
         </div>
       </div>
@@ -54,12 +52,11 @@ export default function Testimonials() {
   );
 }
 
-function TestimonialCard({ test, assignRef }) {
+function TestimonialCard({ test }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div 
-      ref={assignRef} 
       style={{
         ...styles.card,
         background: isHovered ? 'rgba(212, 175, 55, 0.05)' : 'rgba(255, 255, 255, 0.02)',

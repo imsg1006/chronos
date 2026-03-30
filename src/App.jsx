@@ -15,7 +15,22 @@ function App() {
   const mainRef = useRef(null);
 
   useEffect(() => {
-    // Basic setup for smooth scrolling or global GSAP settings can go here
+    // Ensure ScrollTrigger calculates heights correctly after fonts/images load
+    const refreshTrigger = () => ScrollTrigger.refresh();
+    
+    // Refresh when fonts are loaded
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(refreshTrigger);
+    }
+    
+    // Fallback refresh after a short delay to account for images/layout shifts
+    const timer = setTimeout(refreshTrigger, 500);
+    window.addEventListener('load', refreshTrigger);
+    
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('load', refreshTrigger);
+    };
   }, []);
 
   return (
